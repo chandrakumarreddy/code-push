@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <nav className="navbar dark flex-center">
+    <nav className="custom-nav dark flex-center">
       <div>
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand white" to="/">
           Employee Db
         </Link>
       </div>
       <div>
-        <Link className="navbar-brand" to="/add">
+        <Link className="navbar-brand white" to="/add">
           Add Employee
         </Link>
       </div>
