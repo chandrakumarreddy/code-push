@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.dark {
+  background: #000;
+}
+.mt3 {
+  margin: 6rem 0 0;
+}
+
+.white {
+  color: #fff;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  margin: 0;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.w60 {
+  width: 60%;
+  margin: auto;
+}
+
+.w100 {
+  width: 100%;
+}
