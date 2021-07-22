@@ -75,12 +75,20 @@ export default function Edit() {
           name="experience"
         />
       </div>
-      <div className="mb3">
+      <div className="mb3 photo-container">
         <img
           src={employee.photo}
           alt={employee.firstName}
           width="100"
           height="100"
+        />
+        <input
+          type="text"
+          placeholder="photo link"
+          value={employee.photo}
+          onChange={handleChange}
+          required
+          name="photo"
         />
       </div>
       <button type="button" class="btn btn-primary w100" onClick={handleSubmit}>
