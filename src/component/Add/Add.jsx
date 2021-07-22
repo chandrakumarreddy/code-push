@@ -85,13 +85,23 @@ export default function Add() {
           name="experience"
         />
       </div>
-      <div>
+      <div className="mb3">
         <input
-          type="file"
-          accept="image/*"
-          name="photo"
+          type="text"
+          placeholder="photo"
+          value={employee.photo}
           onChange={handleChange}
+          required
+          name="photo"
         />
+        {employee.photo && (
+          <img
+            src={employee.photo}
+            alt={employee.firstName}
+            width="100"
+            height="100"
+          />
+        )}
       </div>
       <button
         type="button"

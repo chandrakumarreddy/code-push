@@ -91,7 +91,11 @@ export default function Edit() {
           name="photo"
         />
       </div>
-      <button type="button" class="btn btn-primary w100" onClick={handleSubmit}>
+      <button
+        type="button"
+        className="btn btn-primary w100"
+        onClick={handleSubmit}
+      >
         Update
       </button>
     </form>
