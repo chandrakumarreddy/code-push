@@ -11,6 +11,7 @@ export default function Add() {
     dob: "",
     designation: "",
     experience: "",
+    photo: "",
   });
   const history = useHistory();
   const handleSubmit = (e) => {
@@ -26,8 +27,11 @@ export default function Add() {
     history.push("/");
   };
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setEmployee((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type } = event.target;
+    setEmployee((prev) => ({
+      ...prev,
+      [name]: type === "file" ? event.target.files[0] : value,
+    }));
   };
   return (
     <form className="form w60" onSubmit={handleSubmit}>
@@ -81,6 +85,7 @@ export default function Add() {
           name="experience"
         />
       </div>
+      <input type="file" accept="image/*" id="file" name="photo"></input>
       <button
         type="button"
         className="btn btn-primary w100"
