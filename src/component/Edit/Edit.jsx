@@ -75,6 +75,14 @@ export default function Edit() {
           name="experience"
         />
       </div>
+      <div className="mb3">
+        <img
+          src={employee.photo}
+          alt={employee.firstName}
+          width="100"
+          height="100"
+        />
+      </div>
       <button type="button" class="btn btn-primary w100" onClick={handleSubmit}>
         Update
       </button>

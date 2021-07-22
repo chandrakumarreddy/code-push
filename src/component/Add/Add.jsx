@@ -27,10 +27,10 @@ export default function Add() {
     history.push("/");
   };
   const handleChange = (event) => {
-    const { name, value, type } = event.target;
+    const { name, value, type, files } = event.target;
     setEmployee((prev) => ({
       ...prev,
-      [name]: type === "file" ? event.target.files[0] : value,
+      [name]: type === "file" ? files[0] : value,
     }));
   };
   return (
@@ -85,7 +85,14 @@ export default function Add() {
           name="experience"
         />
       </div>
-      <input type="file" accept="image/*" id="file" name="photo"></input>
+      <div>
+        <input
+          type="file"
+          accept="image/*"
+          name="photo"
+          onChange={handleChange}
+        />
+      </div>
       <button
         type="button"
         className="btn btn-primary w100"
