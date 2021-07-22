@@ -5,7 +5,7 @@ import EmployeesContext from "../../store/employeeContext";
 export default function Add() {
   const { state: employeesList, dispatch } = React.useContext(EmployeesContext);
   const [employee, setEmployee] = React.useState({
-    id: String + (employeesList.length + 1),
+    id: String(employeesList.length + 1),
     firstName: "",
     lastName: "",
     dob: "",
